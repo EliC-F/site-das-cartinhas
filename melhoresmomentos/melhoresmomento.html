@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="calendario - Copia.png" type="image/x-icon">
+  <title>Melhores Momentos</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  <style>
+    body {
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background-color: #fff3cd; /* goldenrod */
+      color: #8a6d00;
+      margin: 0;
+      padding: 0;
+    }
+
+    .titulo-cartinha {
+      font-size: clamp(2em, 5vw, 3em);
+      text-align: center;
+      margin-top: 40px;
+      color: #8a6d00;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .descricao {
+      font-size: clamp(1em, 2.5vw, 1.2em);
+      text-align: center;
+      margin: 20px auto;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    .galeria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .imagem-container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .imagem-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    .descricao-imagem {
+    font-size: 1.1em;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.85); /* caixinha translúcida */
+    color: #8a6d00;
+    padding: 15px 20px;
+    border-left: 5px solid #f5c518;
+    border-radius: 10px;
+    margin: 20px auto 10px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    text-align: left;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+    }
+
+    .descricao-imagem::before {
+    content: "💌";
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    font-size: 1.5em;
+    }
+
+    /* Efeito de fade-in para dar um toque mais animado */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .voltar a {
+      color: #8a6d00;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
+    }
+
+    .duas-imagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    }
+
+    .duas-imagens img {
+        width: 45%;
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+    <h1 class="titulo-cartinha">Nossos Melhores Momentos ✨</h1>
+  
+    <p class="descricao">
+      Relembrar os momentos especiais que vivemos juntos enche meu coração de alegria. Cada imagem abaixo representa uma memória inesquecível que construímos com amor.
+    </p>
+  
+    <section class="galeria">
+  
+      <div class="imagem-container">
+        <p class="descricao-imagem">
+          Não tem como não começar com um dos melhores momentos para mim. Como tudo começou kkkk, um oi de nossos culpidos, e Glória a Deus pela vida deles! 😂
+        </p>
+        <div class="duas-imagens">
+          <img src="imagens/oi.jpeg" alt="" loading="lazy" />
+          <img src="imagens/oi 2.jpeg" alt="" loading="lazy" />
+        </div>
+      </div>
+  
+      <div class="imagem-container">
+        <p class="descricao-imagem">
+          Esse vai representar dois momentos, tanto a supresa de eu aparecer no teu aniversário com a cara mais limpa kkkk, como o primeiro presente que te dei. 🎂🎁
+        </p>
+        <img src="imagens/primeiropresente.jpg" alt="" loading="lazy" />
+      </div>
+
+      
+      <div class="imagem-container">
+          <p class="descricao-imagem">
+              As nossas voltas das UFMA foram as melhores coisa que aconteceram pra mim lá, as nossas conversas, abraços, carinhos e beijos, Tudo! Poder estar cotigo sempre é o melhor momento para mim! 🗣️💬
+            </p>
+            <img src="imagens/voltasdaufma.jpg" alt="" loading="lazy" />
+        </div>
+        
+        <div class="imagem-container">
+          <p class="descricao-imagem">
+            
+          </p>
+          <img src="imagens/" alt="" loading="lazy" />
+        </div>
+
+        <div class="imagem-container">
+            <p class="descricao-imagem">
+              
+            </p>
+            <img src="" alt="" loading="lazy" />
+        </div>
+
+        <div class="imagem-container">
+            <p class="descricao-imagem">
+              
+            </p>
+            <img src="" alt="" loading="lazy" />
+        </div>
+
+    </section>
+  
+    <div class="voltar">
+      <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+    </div>
+  
+  </body>
+  
+</html>
