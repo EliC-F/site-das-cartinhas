@@ -4,3 +4,51 @@ body{
     background-color:antiquewhite ;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilo para as cartas no index.html */
+.cartinhas ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid; /* Usando grid para organizar as cartas */
+    grid-template-columns: 1fr; /* Apenas uma carta por linha inicialmente */
+    gap: 20px;
+}
+
+/* Quando a tela for maior que 600px, podemos mostrar mais de uma carta na linha */
+@media (min-width: 600px) {
+    .cartinhas ul {
+        grid-template-columns: repeat(2, 1fr); /* Duas cartas por linha */
+    }
+}
+
+/* Quando a tela for maior que 900px, podemos mostrar até 3 cartas por linha */
+@media (min-width: 900px) {
+    .cartinhas ul {
+        grid-template-columns: repeat(3, 1fr); /* Três cartas por linha */
+    }
+}
+
+.cartinhas li {
+    background-color: #f0f0f0; /* Cor de fundo suave para as cartas */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cartinhas li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #ff6347; /* Cor de fundo do link */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cartinhas li a:hover {
+    background-color: #ff4500; /* Cor mais escura quando passar o mouse */
+}
+

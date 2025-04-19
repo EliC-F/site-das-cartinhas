@@ -1,47 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Sitezinho da Felicidade</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitezinho da Felicidade</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fffaf0);
+      color: #3a3a3a;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: crimson;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    .cartinhas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .cartinha {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cartinha img {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+
+    .cartinha h3 {
+      font-size: 1.2em;
+      color: inherit;
+    }
+
+    .cartinha:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .crimson {
+      background-color: #f8d7da;
+      color: #a10000;
+    }
+
+    .goldenrod {
+      background-color: #fff3cd;
+      color: #8a6d00;
+    }
+
+    .seagreen {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .dodgerblue {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+
+    .orchid {
+      background-color: #f3e6f9;
+      color: #6f42c1;
+    }
+  </style>
 </head>
+
 <body>
- <h1>Ter você ao meu lado torna a vida boa! ❤️</h1>
- 
- <p>Meu amor, por meio dessas declarações quero te agradecer e dizer o quanto te amo, saiba que isso é mínimo, comparado a tudo que sinto por você, mas tudo que estiver ao meu alcance para te amar mais, te fazer se sentir amada e entender o quanto você é importante para mim, eu farei! Você é a dona do meu coração, amo amar você!
- </p>
+  <header>
+    <h1>Ter você ao meu lado torna a vida boa! ❤️</h1>
+    <p>Meu amor, por meio dessas declarações quero te agradecer e dizer o quanto te amo. Saiba que isso é mínimo comparado a tudo que sinto por você. Tudo que estiver ao meu alcance para te amar mais, te fazer se sentir amada e entender o quanto você é importante para mim, eu farei! Você é a dona do meu coração, amo amar você!</p>
+  </header>
 
- <h2>Legenda</h2>
- <ul>
-    <strong>
-        <li style="color:crimson;">Porque Eu Te Amo</li>
-    </strong>
+  <main>
+    <section class="cartinhas-grid">
+      <a href="cartas/pqteamo.html" class="cartinha crimson">
+        <img src="cores/crimson16x11.png" alt="Coração Crimson">
+        <h3>Porque Eu Te Amo</h3>
+      </a>
 
-    <strong>
-        <li style="color:darkgoldenrod ;">
-            Melhores Momentos
-        </li>
-    </strong>
+      <a href="#" class="cartinha goldenrod">
+        <img src="cores/darkgoldenrod16x11.png" alt="Estrela dourada">
+        <h3>Melhores Momentos</h3>
+      </a>
 
-    <strong>
-        <li style="color: seagreen;">
-            Metas e Sonhos com Você
-        </li>
-    </strong>
+      <a href="#" class="cartinha seagreen">
+        <img src="cores/seagreen16x11.png" alt="Folha Verde">
+        <h3>Metas e Sonhos com Você</h3>
+      </a>
 
-    <strong>
-        <li style="color: dodgerblue;">
-            Para te fazer Feliz
-        </li>
-    </strong>
+      <a href="#" class="cartinha dodgerblue">
+        <img src="cores/dodgerblue16x11.png" alt="Coração Azul">
+        <h3>Para te fazer Feliz</h3>
+      </a>
 
-    <strong>
-        <li style="color: mediumorchid;">
-            Coisas que Amo em Você
-        </li>
-    </strong>
- </ul>
+      <a href="#" class="cartinha orchid">
+        <img src="cores/mediumorchid16x11.png" alt="Coração Roxo">
+        <h3>Coisas que Amo em Você</h3>
+      </a>
+    </section>
+  </main>
 </body>
+
 </html>
