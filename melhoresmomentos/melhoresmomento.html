@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="calendario - Copia.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
   <title>Melhores Momentos</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
   <style>
     body {
       font-family: 'Segoe UI', cursive, sans-serif;
-      background-color: #fff3cd; /* goldenrod */
+      background-color: #fff3cd;
       color: #8a6d00;
       margin: 0;
       padding: 0;
@@ -55,31 +54,30 @@
     }
 
     .descricao-imagem {
-    font-size: 1.1em;
-    font-style: italic;
-    background: rgba(255, 255, 255, 0.85); /* caixinha translúcida */
-    color: #8a6d00;
-    padding: 15px 20px;
-    border-left: 5px solid #f5c518;
-    border-radius: 10px;
-    margin: 20px auto 10px auto;
-    max-width: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    position: relative;
-    text-align: left;
-    line-height: 1.6;
-    animation: fadeIn 1s ease-in-out;
+      font-size: 1.1em;
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.85);
+      color: #8a6d00;
+      padding: 15px 20px;
+      border-left: 5px solid #f5c518;
+      border-radius: 10px;
+      margin: 20px auto 10px auto;
+      max-width: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      position: relative;
+      text-align: left;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .descricao-imagem::before {
-    content: "💌";
-    position: absolute;
-    left: -15px;
-    top: 10px;
-    font-size: 1.5em;
+      content: "💌";
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      font-size: 1.5em;
     }
 
-    /* Efeito de fade-in para dar um toque mais animado */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -106,83 +104,136 @@
     }
 
     .duas-imagens {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .duas-imagens img {
-        width: 45%;
-        max-width: 300px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      width: 45%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     }
+
+    .citacao {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #8a6d00;
+      background: #fff9e6;
+      border-left: 5px solid #f5c518;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .player-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+    audio {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+    .texto-audio {
+            font-size: 1.1em;
+            color: #5a4500; /* marrom escuro para melhor contraste */
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
   </style>
 </head>
 <body>
 
-    <h1 class="titulo-cartinha">Nossos Melhores Momentos ✨</h1>
-  
-    <p class="descricao">
-      Relembrar os momentos especiais que vivemos juntos enche meu coração de alegria. Cada imagem abaixo representa uma memória inesquecível que construímos com amor.
-    </p>
-  
-    <section class="galeria">
-  
-      <div class="imagem-container">
-        <p class="descricao-imagem">
-          Não tem como não começar com um dos melhores momentos para mim. Como tudo começou kkkk, um oi de nossos culpidos, e Glória a Deus pela vida deles! 😂
-        </p>
-        <div class="duas-imagens">
-          <img src="imagens/oi.jpeg" alt="" loading="lazy" />
-          <img src="imagens/oi 2.jpeg" alt="" loading="lazy" />
-        </div>
+  <h1 class="titulo-cartinha">Nossos Melhores Momentos ✨</h1>
+
+  <div class="player-container">
+    <p class="texto-audio">Como te falei naquela conversa, essa música representa o nosso relacionamento e todas essas memórias🎧</p>
+    <audio controls>
+        <source src="estavala.mpeg" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <p class="descricao">
+    Relembrar os momentos especiais que vivemos juntos enche meu coração de alegria. Cada imagem abaixo representa uma memória inesquecível que construímos com amor.
+  </p>
+
+  <section class="galeria">
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Não tem como não começar com um dos melhores momentos para mim. Como tudo começou kkkk, um "oi" dos nossos cupidos. Glória a Deus pela vida deles! 😂
+      </p>
+      <div class="duas-imagens">
+        <img src="imagens/oi.jpeg" alt="Conversa inicial" loading="lazy" />
+        <img src="imagens/oi 2.jpeg" alt="Continuação da conversa" loading="lazy" />
       </div>
-  
-      <div class="imagem-container">
-        <p class="descricao-imagem">
-          Esse vai representar dois momentos, tanto a supresa de eu aparecer no teu aniversário com a cara mais limpa kkkk, como o primeiro presente que te dei. 🎂🎁
-        </p>
-        <img src="imagens/primeiropresente.jpg" alt="" loading="lazy" />
-      </div>
-
-      
-      <div class="imagem-container">
-          <p class="descricao-imagem">
-              As nossas voltas das UFMA foram as melhores coisa que aconteceram pra mim lá, as nossas conversas, abraços, carinhos e beijos, Tudo! Poder estar cotigo sempre é o melhor momento para mim! 🗣️💬
-            </p>
-            <img src="imagens/voltasdaufma.jpg" alt="" loading="lazy" />
-        </div>
-        
-        <div class="imagem-container">
-          <p class="descricao-imagem">
-            
-          </p>
-          <img src="imagens/" alt="" loading="lazy" />
-        </div>
-
-        <div class="imagem-container">
-            <p class="descricao-imagem">
-              
-            </p>
-            <img src="" alt="" loading="lazy" />
-        </div>
-
-        <div class="imagem-container">
-            <p class="descricao-imagem">
-              
-            </p>
-            <img src="" alt="" loading="lazy" />
-        </div>
-
-    </section>
-  
-    <div class="voltar">
-      <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
     </div>
-  
-  </body>
-  
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Esse vai representar dois momentos: a surpresa de eu aparecer no teu aniversário com a cara mais limpa kkkk, e o primeiro presente que te dei. 🎂🎁
+      </p>
+      <img src="imagens/primeiropresente.jpg" alt="Primeiro presente" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        As nossas voltas da UFMA foram as melhores coisas que aconteceram pra mim lá: conversas, abraços, carinhos e beijos... tudo! Estar contigo sempre é o melhor momento! 🗣️💬
+      </p>
+      <img src="imagens/voltasdaufma.jpg" alt="Momentos na UFMA" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Todos os eventos da igreja são especiais, e é um prazer compartilhar da presença de Deus contigo. Essa foi nossa primeira conferência juntos! ⛪📖
+      </p>
+      <img src="imagens/eventosdaigreja.jpg" alt="Evento na igreja" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Nossa primeira viagem juntos foi mágica! Depois de tudo que passamos, foi como uma recompensa por oficializarmos nosso namoro. 🛣️🚗
+      </p>
+      <img src="imagens/nossaprimeiraviagem.jpg" alt="Primeira viagem" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Nossos aniversários de namoro são momentos lindos de comemoração! 👩🏻‍❤️‍👨🏽
+      </p>
+      <img src="imagens/aniversariosdenamoro.jpg" alt="Aniversário de namoro" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        E encerro com um dos melhores momentos: nosso encontro no Espigão. ❤️‍🔥
+      </p>
+      <img src="imagens/espigao.jpg" alt="Encontro no Espigão" loading="lazy" />
+    </div>
+
+  </section>
+
+  <blockquote class="citacao">
+    "E quero te dizer, meu amor, cada momento ao teu lado foi especial para mim. Você é a coisa mais especial que tenho na vida, e espero ter representado bem alguns dos nossos melhores momentos!" 💖
+  </blockquote>
+
+  <div class="voltar">
+    <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+  </div>
+
+</body>
 </html>
