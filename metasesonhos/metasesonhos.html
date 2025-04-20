@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  <title>Metas e Sonhos</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background-color: #f0fff4;
+      color: #2e8b57; /* seagreen escuro para texto */
+      margin: 0;
+      padding: 0;
+    }
+
+    .titulo-cartinha {
+      font-size: clamp(2em, 5vw, 3em);
+      text-align: center;
+      margin-top: 40px;
+      color: #2e8b57;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .descricao {
+      font-size: clamp(1em, 2.5vw, 1.2em);
+      text-align: center;
+      margin: 20px auto;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    .galeria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .imagem-container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .imagem-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    .descricao-imagem {
+      font-size: 1.1em;
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.9);
+      color: #2e8b57;
+      padding: 15px 20px;
+      border-left: 5px solid #66cdaa;
+      border-radius: 10px;
+      margin: 20px auto 10px auto;
+      max-width: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      position: relative;
+      text-align: left;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .descricao-imagem::before {
+      content: "🌱";
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      font-size: 1.5em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .voltar a {
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
+    }
+
+    .player-container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    audio {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .texto-audio {
+      font-size: 1.1em;
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    .citacao {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #2e8b57;
+      background: #e6fff2;
+      border-left: 5px solid #66cdaa;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 class="titulo-cartinha">Metas e Sonhos 🌠</h1>
+
+  <div class="player-container">
+    <p class="texto-audio">Escolhie essa porque representa bem a gente, tanto a parte dos sonhadores como a mensagem de que até os 30 anos vamos ter conquistado muito! 🎧</p>
+    <audio controls>
+        <source src="metasesonho.mpeg" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <p class="descricao">
+    Uma das coisa que mais amo em nós é por sermos sonhadores e termos uma fé imensa, e quero declarar, os nosso sonhos e planos estarão alinhados com os do Senhor para que tudo que nós vivamos seja testemunho da sua infinita graça e amor!
+  </p>
+
+  <section class="galeria">
+    
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        Vou começar com o meu maior sonho e o principal, a nossa Família.
+      </p>
+      <img src="imagens/familia.jpeg" alt="" loading="lazy" />
+    </div>
+
+   
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        O sonho que tenho é ver o nosso ministerio gerando frutos para honra e glória do senhor!
+      </p>
+      <img src="imagens/Culto de Comunhão ao Entardecer.png" alt="" loading="lazy" />
+    </div>
+
+    
+    <div class="imagem-container">
+      <p class="descricao-imagem">
+        A compra do nosso apartamento!
+      </p>
+      <img src="" alt="" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+        <p class="descricao-imagem">
+          Nossa viagem para a Suiça!
+        </p>
+        <img src="imagens/Pôr do sol nos Alpes Suíços.png" alt="" loading="lazy" />
+      </div>
+
+      <div class="imagem-container">
+        <p class="descricao-imagem">
+          
+        </p>
+        <img src="" alt="" loading="lazy" />
+      </div>
+
+      <div class="imagem-container">
+        <p class="descricao-imagem">
+          
+        </p>
+        <img src="" alt="" loading="lazy" />
+      </div>
+
+  </section>
+
+  <blockquote class="citacao">
+    "Que nossos sonhos sejam o combustível que nos move a cada dia, e que nossas metas nos ajudem a alcançar o que parece impossível!" ✨
+  </blockquote>
+
+  <div class="voltar">
+    <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+  </div>
+
+</body>
+</html>
