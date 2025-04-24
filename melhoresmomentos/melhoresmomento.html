@@ -35,17 +35,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
       padding: 20px;
     }
 
     .imagem-container {
+      display: none;
       text-align: center;
       max-width: 600px;
       width: 100%;
+      animation: fadeIn 0.5s ease-in-out;
     }
 
-    .imagem-container img {
+    .imagem-container.active {
+      display: block;
+    }
+
+    .imagem-container img, .duas-imagens img {
       width: 100%;
       max-width: 600px;
       border-radius: 12px;
@@ -67,7 +72,6 @@
       position: relative;
       text-align: left;
       line-height: 1.6;
-      animation: fadeIn 1s ease-in-out;
     }
 
     .descricao-imagem::before {
@@ -78,13 +82,73 @@
       font-size: 1.5em;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    .duas-imagens {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .duas-imagens img {
+      width: 45%;
+      max-width: 300px;
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .botoes button {
+      background-color: #f5c518;
+      color: #5a4500;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .botoes button:hover {
+      background-color: #e0b014;
+    }
+
+    .citacao {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #8a6d00;
+      background: #fff9e6;
+      border-left: 5px solid #f5c518;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .player-container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    audio {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .texto-audio {
+      font-size: 1.1em;
+      color: #5a4500;
+      margin-bottom: 10px;
+      font-weight: 500;
     }
 
     .voltar {
@@ -103,56 +167,10 @@
       text-decoration: underline;
     }
 
-    .duas-imagens {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-
-    .duas-imagens img {
-      width: 45%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .citacao {
-      font-size: 1.2em;
-      font-style: italic;
-      color: #8a6d00;
-      background: #fff9e6;
-      border-left: 5px solid #f5c518;
-      padding: 20px;
-      margin: 40px auto;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .player-container {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-    audio {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 8px;
-            outline: none;
-        }
-
-    .texto-audio {
-            font-size: 1.1em;
-            color: #5a4500; /* marrom escuro para melhor contraste */
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
   </style>
 </head>
 <body>
@@ -162,18 +180,18 @@
   <div class="player-container">
     <p class="texto-audio">Como te falei naquela conversa, essa música representa o nosso relacionamento e todas essas memórias🎧</p>
     <audio controls>
-        <source src="estavala.mpeg" type="audio/mpeg" />
-        Seu navegador não suporta áudio.
+      <source src="estavala.mpeg" type="audio/mpeg" />
+      Seu navegador não suporta áudio.
     </audio>
   </div>
 
   <p class="descricao">
-    Relembrar os momentos especiais que vivemos juntos enche meu coração de alegria. Cada imagem abaixo representa uma memória inesquecível que construímos Juntos.
+    Relembrar os momentos especiais que vivemos juntos enche meu coração de alegria. Cada imagem abaixo representa uma memória inesquecível que construímos juntos.
   </p>
 
-  <section class="galeria">
-
-    <div class="imagem-container">
+  <section class="galeria" id="galeria">
+    <!-- Cada imagem-container representa uma "página" -->
+    <div class="imagem-container active">
       <p class="descricao-imagem">
         Não tem como não começar com um dos melhores momentos para mim. Como tudo começou kkkk, um "oi" dos nossos cupidos. Glória a Deus pela vida deles! 😂
       </p>
@@ -213,19 +231,23 @@
 
     <div class="imagem-container">
       <p class="descricao-imagem">
-        Nossos aniversários de namoro, escolhi essa foto do primeiro para representar todos, é um prazer poder comemorar os aniverários de nossa união! 👩🏻‍❤️‍👨🏽
+        Nossos aniversários de namoro, escolhi essa foto do primeiro para representar todos, é um prazer poder comemorar os aniversários de nossa união! 👩🏻‍❤️‍👨🏽
       </p>
       <img src="imagens/aniversariosdenamoro.jpg" alt="Aniversário de namoro" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">
-        E encerro com um dos melhores momentos: nosso encontro no Espigão. Nem preciso falar muito, Deus usou nosso outros culpidos para que pudessemos estar aqui Hoje, Deus cuida de cada detalhe! ❤️‍🔥
+        E encerro com um dos melhores momentos: nosso encontro no Espigão. Nem preciso falar muito, Deus usou nossos outros cupidos para que pudéssemos estar aqui hoje. Deus cuida de cada detalhe! ❤️‍🔥
       </p>
       <img src="imagens/espigao.jpg" alt="Encontro no Espigão" loading="lazy" />
     </div>
-
   </section>
+
+  <div class="botoes">
+    <button onclick="mudarImagem(-1)">Anterior</button>
+    <button onclick="mudarImagem(1)">Próximo</button>
+  </div>
 
   <blockquote class="citacao">
     "E quero te dizer, meu amor, cada momento ao teu lado foi especial para mim. Você é a coisa mais especial que tenho na vida, e espero ter representado bem alguns dos nossos melhores momentos!" 💖
@@ -235,5 +257,24 @@
     <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
   </div>
 
+  <script>
+    let indiceAtual = 0;
+    const containers = document.querySelectorAll('.imagem-container');
+
+    function mostrarImagem(index) {
+      containers.forEach((container, i) => {
+        container.classList.remove('active');
+        if (i === index) container.classList.add('active');
+      });
+    }
+
+    function mudarImagem(direcao) {
+      indiceAtual += direcao;
+      if (indiceAtual < 0) indiceAtual = containers.length - 1;
+      if (indiceAtual >= containers.length) indiceAtual = 0;
+      mostrarImagem(indiceAtual);
+    }
+  </script>
 </body>
 </html>
+

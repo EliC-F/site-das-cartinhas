@@ -10,7 +10,7 @@
     body {
       font-family: 'Segoe UI', cursive, sans-serif;
       background-color: #f0fff4;
-      color: #2e8b57; /* seagreen escuro para texto */
+      color: #2e8b57;
       margin: 0;
       padding: 0;
     }
@@ -40,9 +40,16 @@
     }
 
     .imagem-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       max-width: 600px;
       width: 100%;
+    }
+
+    .imagem-container.ativo {
+      display: flex;
     }
 
     .imagem-container img {
@@ -51,6 +58,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       object-fit: cover;
+      margin: 10px 0;
     }
 
     .descricao-imagem {
@@ -64,43 +72,27 @@
       margin: 20px auto 10px auto;
       max-width: 90%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      position: relative;
-      text-align: left;
-      line-height: 1.6;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .descricao-imagem::before {
-      content: "🌱";
-      position: absolute;
-      left: -15px;
-      top: 10px;
-      font-size: 1.5em;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    .voltar {
       text-align: center;
-      margin: 40px 0;
     }
 
-    .voltar a {
-      color: #2e8b57;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
+    .botoes {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    .voltar a:hover {
-      text-decoration: underline;
+    .botoes button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .botoes button:hover {
+      background-color: #256d48;
     }
 
     .player-container {
@@ -134,7 +126,22 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .voltar a {
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
     }
 
   </style>
@@ -144,7 +151,7 @@
   <h1 class="titulo-cartinha">Metas e Sonhos 🌠</h1>
 
   <div class="player-container">
-    <p class="texto-audio">Escolhie essa porque representa bem a gente, tanto a parte dos sonhadores como a mensagem de que até os 30 anos vamos ter conquistado muito! 🎧</p>
+    <p class="texto-audio">Escolhi essa porque representa bem a gente, tanto a parte dos sonhadores como a mensagem de que até os 30 anos vamos ter conquistado muito! 🎧</p>
     <audio controls>
         <source src="metasesonho.mpeg" type="audio/mpeg" />
         Seu navegador não suporta áudio.
@@ -152,64 +159,86 @@
   </div>
 
   <p class="descricao">
-    Uma das coisa que mais amo em nós é por sermos sonhadores e termos uma fé imensa, e quero declarar, os nosso sonhos e planos estarão alinhados com os do Senhor para que tudo que nós vivamos seja testemunho da sua infinita graça e amor!
+    Uma das coisas que mais amo em nós é por sermos sonhadores e termos uma fé imensa, e quero declarar: os nossos sonhos e planos estarão alinhados com os do Senhor, para que tudo que nós vivamos seja testemunho da sua infinita graça e amor!
   </p>
 
   <section class="galeria">
-    
-    <div class="imagem-container">
-      <p class="descricao-imagem">
-        Vou começar com o meu maior sonho e o principal, a nossa Família.
-      </p>
+    <div class="imagem-container ativo">
+      <p class="descricao-imagem">Vou começar com o meu maior sonho e o principal: a nossa família.</p>
       <img src="imagens/familia.jpeg" alt="" loading="lazy" />
     </div>
 
-   
     <div class="imagem-container">
-      <p class="descricao-imagem">
-        O sonho que tenho é ver o nosso ministerio gerando frutos para honra e glória do senhor!
-      </p>
+      <p class="descricao-imagem">O sonho que tenho é ver o nosso ministério gerando frutos para honra e glória do Senhor!</p>
       <img src="imagens/Culto de Comunhão ao Entardecer.png" alt="" loading="lazy" />
     </div>
 
-    
     <div class="imagem-container">
-      <p class="descricao-imagem">
-        A compra do nosso apartamento!
-      </p>
-      <img src="" alt="" loading="lazy" />
+      <p class="descricao-imagem">A compra do nosso apartamento!</p>
+      <img src="imagens/Entregando a chave do lar novo.png" alt="" loading="lazy" />
     </div>
 
     <div class="imagem-container">
-        <p class="descricao-imagem">
-          Nossa viagem para a Suiça!
-        </p>
-        <img src="imagens/Pôr do sol nos Alpes Suíços.png" alt="" loading="lazy" />
-      </div>
+      <p class="descricao-imagem">Nossa viagem para a Suíça!</p>
+      <img src="imagens/Pôr do sol nos Alpes Suíços.png" alt="" loading="lazy" />
+    </div>
 
-      <div class="imagem-container">
-        <p class="descricao-imagem">
-          
-        </p>
-        <img src="" alt="" loading="lazy" />
-      </div>
+    <div class="imagem-container">
+      <p class="descricao-imagem">A compra do nosso Civic.</p>
+      <img src="imagens/Entrega do carro novo.png" alt="" loading="lazy" />
+    </div>
 
-      <div class="imagem-container">
-        <p class="descricao-imagem">
-          
-        </p>
-        <img src="" alt="" loading="lazy" />
-      </div>
+    <div class="imagem-container">
+      <p class="descricao-imagem">Malhando e focados juntos.</p>
+      <img src="imagens/Casal se Exercitando Juntos no Ginásio.png" alt="" loading="lazy" />
+      <img src="imagens/corrida.png" alt="" loading="lazy" />
+    </div>
 
+    <div class="imagem-container">
+      <p class="descricao-imagem">Compartilhar momentos de conversa e amor.</p>
+      <img src="imagens/Café da Manhã com Sol e Amor.png" alt="" loading="lazy" />
+    </div>
+
+    <div class="imagem-container">
+      <p class="descricao-imagem">A compra do nosso sítio.</p>
+      <img src="imagens/Casal no Campo ao Sol.png" alt="" loading="lazy" />
+    </div>
   </section>
 
+  <div class="botoes">
+    <button onclick="mostrarAnterior()">Anterior</button>
+    <button onclick="mostrarProximo()">Próxima</button>
+  </div>
+
   <blockquote class="citacao">
-    "Que nossos sonhos sejam o combustível que nos move a cada dia, e que nossas metas nos ajudem a alcançar o que parece impossível!" ✨
+    "Que nossos sonhos estejam alinhados com o propósito do Senhor, e quando vivermos todos eles, o nome dEle seja glorificado!" ✨
   </blockquote>
 
   <div class="voltar">
     <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
   </div>
 
+  <script>
+    const containers = document.querySelectorAll('.imagem-container');
+    let indiceAtual = 0;
+
+    function mostrarImagem(index) {
+      containers.forEach((container, i) => {
+        container.classList.toggle('ativo', i === index);
+      });
+    }
+
+    function mostrarProximo() {
+      indiceAtual = (indiceAtual + 1) % containers.length;
+      mostrarImagem(indiceAtual);
+    }
+
+    function mostrarAnterior() {
+      indiceAtual = (indiceAtual - 1 + containers.length) % containers.length;
+      mostrarImagem(indiceAtual);
+    }
+  </script>
+
 </body>
 </html>
+

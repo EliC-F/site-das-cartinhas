@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Poster-Alegria-PNG.png" type="image/x-icon">
+  <title>Para te fazer feliz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      color: dodgerblue;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .music-player {
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .affirmations {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .box {
+      background-color: #ffffff;
+      border-left: 6px solid dodgerblue;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .box.active {
+      display: block;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .voltar a {
+      color: #666;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
+    }
+
+    .next-btn {
+      margin-top: 1.5rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .next-btn:hover {
+      background-color: #1e90ff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Para te fazer feliz 😄</h1>
+    <p>O que vou te declarar aqui é pouco perto de tudo que quero te dizer para te fazer feliz! ❤️</p>
+  </header>
+
+  <div class="music-player">
+    <audio controls>
+      <source src="pratefazerfeliz.mpeg" type="audio/mpeg">
+      Seu navegador não suporta o player de áudio.
+    </audio>
+  </div>
+
+  <section class="affirmations" id="affirmations">
+    <div class="box active"><p> Pra começar não posso declarar outra coisa. EU AMO TU TODINHAAAAAA! ❤️😍</p></div>
+    <div class="box"><p>Tu tem os olhinhos mais brilhantes e lindos de Todos! Eles me cativam com uma olhada, ainda mais por ser o brilho do Espírito Santo 👀✨</p></div>
+    <div class="box"><p> Tu é muito criativa me encanto com isso! Amo ver como tu dá cor até aos momentos mais simples. 🎨💡</p></div>
+    <div class="box"><p>Eu sou viciaaaadooooooo em Ti e necessitado de ti (De uma forma boa, ta bom? kkkkkk) 😭🥵</p></div>
+    <div class="box"><p> Amo demais conversar contigo, e gosto de fazer parte da tua vida, Tu é muito especial para mim! 🗣️💬</p></div>
+    <div class="box"><p>MEU AMOR, QUE BOQUINHA DELICIOSAAAA!!! 👄</p></div>
+    <div class="box"><p>Tenho muito orgulho do quão focada tu é para tudo!! 🥇🔝</p></div>
+    <div class="box"><p>TU É MINHA MAROMBONA, TU TA GIGANTE MEU AMOR!!! 💪🏻🦵🏻🏋🏻‍♀️</p></div>
+    <div class="box"><p>Obrigado por tudo meu amor!!! 🙌🏽❤️</p></div>
+    <div class="box"><p>Tu é a minha, eterna e única Melhor amiga! 👩🏻‍🤝‍👨🏾</p></div>
+    <div class="box"><p>Obrigado por estar vivendo e sonhando junto comigo, fico feliz em ter te encontrado! 🌠</p></div>
+    <div class="box"><p>Tudo ja deu certo, Em nome de Jesus viveremos as melhores coisas juntos! ❤️</p></div>
+  </section>
+
+  <button class="next-btn" onclick="showNext()">Próxima 💌</button>
+
+  <footer>
+    TE QUERO FELIZ SEMPRE! ❤️
+  </footer>
+
+  <div class="voltar">
+    <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const boxes = document.querySelectorAll('.box');
+
+    function showNext() {
+      if (currentIndex < boxes.length - 1) {
+        boxes[currentIndex].classList.remove('active');
+        currentIndex++;
+        boxes[currentIndex].classList.add('active');
+      } else {
+        alert("Essas foram todas as declarações ❤️");
+      }
+    }
+  </script>
+
+</body>
+</html>

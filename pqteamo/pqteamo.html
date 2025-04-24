@@ -94,6 +94,27 @@
             color: antiquewhite;
             margin-bottom: 10px;
         }
+
+        .botoes-navegacao {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .botoes-navegacao button {
+            background-color: #fff0f0;
+            color: crimson;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .botoes-navegacao button:hover {
+            background-color: #ffe0e0;
+        }
     </style>
 </head>
 <body>
@@ -108,6 +129,7 @@
         </audio>
     </div>
 
+    <!-- Cartinhas -->
     <div class="motivo">
         <h2>1 - Eu te Amo: Porque o Propósito de Deus nos uniu!✨</h2>
         <p>Não conseguiria começar de outra forma. O que vivemos e sentimos hoje é tudo pela graça e pelo amor do nosso bom Deus.</p>
@@ -120,12 +142,12 @@
 
     <div class="motivo">
         <h2>3 - Eu te Amo: Porque eu me sinto amado por ti!🤍</h2>
-        <p>Quero te declarar a minha gratidão, meu amor. Acredito que tu entende o bem que me faz. Tu mudou a minha vida em vários sentios. Muito obrigado por TUDO!</p>
+        <p>Quero te declarar a minha gratidão, meu amor. Acredito que tu entende o bem que me faz. Tu mudou a minha vida em vários sentidos. Muito obrigado por TUDO!</p>
     </div>
 
     <div class="motivo">
         <h2>4 - Eu te Amo: Porque viver esse amor ao teu lado me trouxe realizações.🌟</h2>
-        <p>Meu amor, como sempre falamos, nossa união é o cumprimento dos propósitos de Deus nas nossas vidas e viver isso ao teu lado me traz uma alegria tão grnade.</p>
+        <p>Meu amor, como sempre falamos, nossa união é o cumprimento dos propósitos de Deus nas nossas vidas e viver isso ao teu lado me traz uma alegria tão grande.</p>
     </div>
 
     <div class="motivo">
@@ -188,6 +210,11 @@
         <p>Meu amor, não podia encerrar de outra forma. A maior motivação de te amar é querer estar ao teu lado pelo resto da vida, até que Jesus volte. Finalizo declarando que viveremos o melhor de Deus para nossas vidas e seremos felizes para sempre! AMÉM!!!!</p>
     </div>
 
+    <div class="botoes-navegacao">
+        <button onclick="mostrarAnterior()">⬅️ Anterior</button>
+        <button onclick="mostrarProxima()">Próxima ➡️</button>
+    </div>
+
     <blockquote class="citacao">
         "Essas são as minhas declarações a ti Meu Amor, espero que goste, e pra mim sempre será um prazer te dizer o quanto te Amo!" 💖
     </blockquote>
@@ -200,5 +227,32 @@
     <div class="voltar">
         <a href="../index.html"><img src="voltar.png" alt=""><br>Voltar para o início</a>
     </div>
+
+    <script>
+        const cartinhas = document.querySelectorAll('.motivo');
+        let atual = 0;
+
+        function mostrarCartinha(index) {
+            cartinhas.forEach((el, i) => {
+                el.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function mostrarProxima() {
+
+            atual = (atual + 1) % cartinhas.length;
+                mostrarCartinha(atual);
+        }
+
+
+        function mostrarAnterior() {
+            if (atual > 0) {
+                atual--;
+                mostrarCartinha(atual);
+            }
+        }
+
+        mostrarCartinha(atual);
+    </script>
 </body>
 </html>
