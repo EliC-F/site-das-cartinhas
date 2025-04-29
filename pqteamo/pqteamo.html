@@ -32,6 +32,7 @@
             width: 80%;
             border-radius: 12px;
             box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            display: none;
         }
 
         .motivo h2 {
@@ -192,7 +193,7 @@
 
     <div class="motivo">
         <h2>13 - Eu te Amo: Porque eu vejo Jesus em ti.✝️</h2>
-        <p>Como já falei acima, esse amor, nossas vivências... em tudo vejo Deus agindo em nossas vidas. O cuidado e o amor que tu tem por mim me faz te  amar cada vez mais, e querer conhecer mais a Ele, para desfrutar (E te fazer desfrutar) de um amor como o de Cristo.</p>
+        <p>Como já falei acima, esse amor, nossas vivências... em tudo vejo Deus agindo em nossas vidas. O cuidado e o amor que tu tem por mim me faz te amar cada vez mais, e querer conhecer mais a Ele, para desfrutar (E te fazer desfrutar) de um amor como o de Cristo.</p>
     </div>
 
     <div class="motivo">
@@ -239,17 +240,13 @@
         }
 
         function mostrarProxima() {
-
             atual = (atual + 1) % cartinhas.length;
-                mostrarCartinha(atual);
+            mostrarCartinha(atual);
         }
 
-
         function mostrarAnterior() {
-            if (atual > 0) {
-                atual--;
-                mostrarCartinha(atual);
-            }
+            atual = (atual - 1 + cartinhas.length) % cartinhas.length;
+            mostrarCartinha(atual);
         }
 
         mostrarCartinha(atual);

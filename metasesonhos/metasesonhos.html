@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="icone.png" type="image/x-icon" />
   <title>Metas e Sonhos</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
@@ -46,10 +46,13 @@
       text-align: center;
       max-width: 600px;
       width: 100%;
+      transition: opacity 0.5s ease;
+      opacity: 0;
     }
 
     .imagem-container.ativo {
       display: flex;
+      opacity: 1;
     }
 
     .imagem-container img {
@@ -59,6 +62,19 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       object-fit: cover;
       margin: 10px 0;
+    }
+
+    .duas-imagens {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .duas-imagens img {
+      width: 45%;
+      max-width: 300px;
     }
 
     .descricao-imagem {
@@ -102,7 +118,7 @@
     }
 
     audio {
-      width: 90%;
+      width: 100%;
       max-width: 400px;
       border-radius: 8px;
       outline: none;
@@ -143,7 +159,6 @@
     .voltar a:hover {
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
@@ -165,43 +180,45 @@
   <section class="galeria">
     <div class="imagem-container ativo">
       <p class="descricao-imagem">Vou começar com o meu maior sonho e o principal: a nossa família.</p>
-      <img src="imagens/familia.jpeg" alt="" loading="lazy" />
+      <img src="imagens/familia.jpeg" alt="Família feliz unida" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">O sonho que tenho é ver o nosso ministério gerando frutos para honra e glória do Senhor!</p>
-      <img src="imagens/Culto de Comunhão ao Entardecer.png" alt="" loading="lazy" />
+      <img src="imagens/Culto de Comunhão ao Entardecer.png" alt="Culto de comunhão ao entardecer" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">A compra do nosso apartamento!</p>
-      <img src="imagens/Entregando a chave do lar novo.png" alt="" loading="lazy" />
+      <img src="imagens/Entregando a chave do lar novo.png" alt="Entrega da chave do nosso lar" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">Nossa viagem para a Suíça!</p>
-      <img src="imagens/Pôr do sol nos Alpes Suíços.png" alt="" loading="lazy" />
+      <img src="imagens/Pôr do sol nos Alpes Suíços.png" alt="Pôr do sol nos Alpes Suíços" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">A compra do nosso Civic.</p>
-      <img src="imagens/Entrega do carro novo.png" alt="" loading="lazy" />
+      <img src="imagens/Entrega do carro novo.png" alt="Entrega do nosso carro novo" loading="lazy" />
     </div>
 
     <div class="imagem-container">
-      <p class="descricao-imagem">Malhando e focados juntos.</p>
-      <img src="imagens/Casal se Exercitando Juntos no Ginásio.png" alt="" loading="lazy" />
-      <img src="imagens/corrida.png" alt="" loading="lazy" />
+      <p class="descricao-imagem">Malhando e focados juntos</p>
+      <div class="duas-imagens">
+        <img src="imagens/Casal se Exercitando Juntos no Ginásio.png" alt="Casal malhando no ginásio" loading="lazy" />
+        <img src="imagens/corrida.png" alt="Casal correndo junto ao ar livre" loading="lazy" />
+      </div>
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">Compartilhar momentos de conversa e amor.</p>
-      <img src="imagens/Café da Manhã com Sol e Amor.png" alt="" loading="lazy" />
+      <img src="imagens/Café da Manhã com Sol e Amor.png" alt="Café da manhã romântico ao sol" loading="lazy" />
     </div>
 
     <div class="imagem-container">
       <p class="descricao-imagem">A compra do nosso sítio.</p>
-      <img src="imagens/Casal no Campo ao Sol.png" alt="" loading="lazy" />
+      <img src="imagens/Casal no Campo ao Sol.png" alt="Casal feliz no campo ensolarado" loading="lazy" />
     </div>
   </section>
 
@@ -212,10 +229,11 @@
 
   <blockquote class="citacao">
     "Que nossos sonhos estejam alinhados com o propósito do Senhor, e quando vivermos todos eles, o nome dEle seja glorificado!" ✨
+    <br><cite>— Nós dois</cite>
   </blockquote>
 
   <div class="voltar">
-    <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+    <a href="../index.html"><img src="voltar.png" alt="Ícone de voltar" /><br>Voltar para o início</a>
   </div>
 
   <script>
@@ -241,4 +259,3 @@
 
 </body>
 </html>
-

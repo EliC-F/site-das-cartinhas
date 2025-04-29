@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
+  <title>Coisas que amo em você</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf3fb;
+      color: #4a004d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .music-player {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    header {
+      text-align: center;
+      color: orchid;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .affirmation-box {
+      background-color: #fff;
+      border-left: 6px solid orchid;
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: orchid;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #c060c0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .voltar a {
+      color: #666;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .voltar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Coisas que amo em você 😍</h1>
+    <p>Meu amor, eu amo tu todinha, tudo em ti me faz te amar mais!</p>
+  </header>
+
+  <div class="music-box">
+    <h2>Toque essa música linda 🎶</h2>
+    <audio controls>
+      <source src="pupila.mpeg" type="audio/mpeg">
+      Seu navegador não suporta o player de áudio.
+    </audio>
+  </div>
+  
+
+  <div class="affirmation-box" id="box">
+    Você é um presente de Deus que ilumina meus dias! 🎁✨
+  </div>
+
+  <button class="next-btn" onclick="nextAffirmation()">Próximo</button>
+
+  <footer>
+    Essas são só algumas... eu diria que exitem infinitas coisas que amo em você. 💖
+  </footer>
+
+  <div class="voltar">
+    <a href="../index.html"><img src="voltar.png" alt="Voltar" /><br>Voltar para o início</a>
+  </div>
+
+  <script>
+    const affirmations = [
+      "Amo viver o próposito de Deus ao teu lado e te ter com companheira nessa caminahda! 👩🏻‍🤝‍👨🏽",
+      "Amo tua alegria, ela contagia! 🤣",
+      "Amo O jeito que você se importa com as pessoas, e comigo também ❤️",
+      "Amo como você sempre me entende, mesmo quando eu sou um pouco díficil. 😅",
+      "Amo quando tu me enche de carinho 🤗",
+      "Amo ver o quanto tu é esforçada e corre atras dos teus sonhos! Obrigado por compartilhar isso comigo ❤️",
+      "Amo quando tu fala sobre nós com fé e declarando tudo qeu viveremos! 🙌🏽",
+      "Amo a confiança que tu deposita em mim e permiti que eu seja um homem sério para que você seja mais feminina, amo cuidar de ti! ❤️",
+      "Amo o teu corção generoso e de cuidado, não é ser besta, é viver o amor de Jesus e derramar na vida das pessoas! ❤️",
+      "Amo tua família, ja me sinto parte dela kkkkk 👩‍👨‍👧‍👦",
+      "Amo como tu me leva para mais perto de Deus, seja em adoração, oração, mudanças, em tudo sou grato por tu ser essa mulher sábia ❤️",
+      "Amo ver tu planejando e sonhando sobre o futuro, me motiva a sonhar cada vez mais. ❤️",
+      "Amo que tu me ama, e Eu amo te amar! ❤️",
+      "Amo que nossas ideias batem, que temos os memos neuronios kkkkkk ",
+      "Amo que tu ama Jesus acima de tudo! ❤️",
+      "Amo te ver feliz! ❤️",
+      "Eu amo te mar meu amor, amo tu todinha, tudo em ti me faz te amar cada vez mais! ❤️"
+    ];
+
+    let index = 0;
+
+    function nextAffirmation() {
+      index = (index + 1) % affirmations.length;
+      document.getElementById("box").innerText = affirmations[index];
+    }
+  </script>
+
+</body>
+</html>
